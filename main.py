@@ -11,6 +11,7 @@ ENTRY = "Out of office: the fern, unwatered since March, has unionized with the 
 
 
 def main() -> None:
+    assert 1 <= len(ENTRY) <= 120, "entry length out of range"
     out_dir = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
     os.makedirs(out_dir, exist_ok=True)
     path = os.path.join(out_dir, "entry.txt")
